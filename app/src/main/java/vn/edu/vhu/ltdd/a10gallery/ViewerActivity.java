@@ -29,7 +29,7 @@ public class ViewerActivity extends AppCompatActivity {
         pager = findViewById(R.id.pager);
         tvChiSo = findViewById(R.id.tvChiSo);
 
-        pager.setAdapter(new AnhPagerAdapter(MainActivity.ANH));
+        pager.setAdapter(new AnhPagerAdapter(MainActivity.DANH_SACH_ANH));
 
         // Nhảy thẳng tới ảnh người dùng đã bấm; false = không chạy hiệu ứng trượt lúc vừa mở
         int viTri = getIntent().getIntExtra(MainActivity.EXTRA_VI_TRI, 0);
@@ -46,6 +46,6 @@ public class ViewerActivity extends AppCompatActivity {
     }
 
     private void capNhatChiSo(int viTri) {
-        tvChiSo.setText(getString(R.string.chi_so, viTri + 1, MainActivity.ANH.length));
+        tvChiSo.setText(getString(R.string.chi_so, viTri + 1, MainActivity.DANH_SACH_ANH.size()));
     }
 }

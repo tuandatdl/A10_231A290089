@@ -28,13 +28,30 @@
         android:textSize="12sp"
         android:textStyle="italic" />
 
-    <Button
-        android:id="@+id/btnDoiCot"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="wrap_content"
+    <!-- Hàng nút Đổi số cột và Chuyển Lưới so le NC2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/doi_cot" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDoiCot"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/doi_cot" />
+
+        <Button
+            android:id="@+id/btnStaggered"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Lưới so le (NC2)" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAnh"
